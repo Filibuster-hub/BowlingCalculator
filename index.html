@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowl</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top">
+        <div class="image-container" id="">
+            <img src="images/bowl.png" alt="green bowling ball attacks pins" id="attack-image" class="image">
+            <img src="images/gutter.png" alt="gutter ball" id="gutter-image" class="image">
+            <img src="images/strike.png" alt="streeeeike!" id="strike-image" class="image">
+            <img src="images/trumpbowl.png" alt="make america great again hat on top of bowling pins" id="merica-image"
+                class="image active">
+        </div>
+        <nav class="nav-bar">
+            <h1 id="title">Lets Bowl!</h1>
+            <button id="randomButton">random score</button>
+            <form action="/">
+                <fieldset>
+                    <label for="input-score">Enter Score: </label>
+                    <input type="number" name="input-score" id="input-score" min="0" max="10" step="1" value="0">
+                    <button id="roll">roll</button>
+                </fieldset>
+
+            </form>
+
+        </nav>
+
+    </div>
+    <div class="flex-container">
+        <div class="frame focus" id="frame1">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare1"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame2">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare2"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame3">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare3"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame4">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare4"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame5">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare5"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame6">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare6"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame7">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare7"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame8">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare8"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="frame" id="frame9">
+            <div class="top-frame">
+                <p class="pre-spare"></p>
+                <p class="spare" id="spare9"></p>
+            </div>
+            <p></p>
+        </div>
+        <div class="last frame" id="frame10">
+            <div class="top-frame">
+                <p class="last spare" id="final-spare-1"></p>
+                <p class="last spare" id="final-spare-2"></p>
+                <p class="last spare" id="final-spare-3"></p>
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
