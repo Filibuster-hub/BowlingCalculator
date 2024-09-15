@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let scoreInput = document.getElementById('input-score');
 
         let alert = document.getElementById('input-alert');
-        if (Number(scoreInput.value) > Number(scoreInput.max) || isNaN(scoreInput.value) || Number(scoreInput.value) < Number(scoreInput.min)) {
+        if (Number(scoreInput.value) > Number(scoreInput.max) || isNaN(scoreInput.value) || Number(scoreInput.value) < 0) {
             alert.classList.add('show');
 
         } else {
