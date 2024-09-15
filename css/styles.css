@@ -43,7 +43,8 @@ body {
     transition: opacity .25s ease-in-out;
 
 }
-.active{
+
+.active {
     opacity: 1;
 }
 
@@ -81,26 +82,29 @@ label {
     /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
-    justify-content:center; 
-    flex-shrink: 0; 
+    justify-content: center;
+    flex-shrink: 0;
 }
-.top-frame{
+
+.top-frame {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.frame:last-child{
+
+.frame:last-child {
     border-right: 2px solid black;
 }
-.frame p{
+
+.frame p {
     box-sizing: border-box;
     flex-basis: 50px;
     height: 50px;
     flex-grow: 1;
 }
 
-p{
+p {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -108,6 +112,7 @@ p{
     /* text-align: center; */
     margin: 0;
 }
+
 .spare {
     flex-basis: 50px;
     height: 50px;
@@ -116,25 +121,36 @@ p{
     box-sizing: border-box;
 }
 
-.focus{
+.focus {
     border-color: #cc00cc;
     border-right: 2px solid #cc00cc;
 }
-.spare.last:first-child{
+
+.spare.last:first-child {
     border-left: none;
 }
 
-input[type="number"]{
+input[type="number"] {
     font-size: large;
 }
-.spare,.pre-spare{
+
+.spare,
+.pre-spare {
     /* display: inline-block; */
 }
 
-div{
+div {
     text-align: center;
 }
 
-.show-spare{
+.show-spare {
     font-weight: 900;
+}
+
+#input-alert {
+    color: red;
+    display: none;
+}
+#input-alert.show{
+    display: block;
 }

@@ -21,12 +21,13 @@
         <nav class="nav-bar">
             <h1 id="title">Lets Bowl!</h1>
             <button id="randomButton">random score</button>
-            <form action="/">
+            <form action="/" class="input-container">
                 <fieldset>
                     <label for="input-score">Enter Score: </label>
                     <input type="number" name="input-score" id="input-score" min="0" max="10" step="1" value="0">
                     <button id="roll">roll</button>
                 </fieldset>
+                <p id="input-alert">Invalid number of pins</p>
 
             </form>
 
