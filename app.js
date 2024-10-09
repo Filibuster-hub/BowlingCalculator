@@ -70,9 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         documentFrameContainer.querySelector('.pre-spare').textContent = scoreValue;
 
                         scoreInput.setAttribute('max', 10 - scoreValue); //set maxinput value to 10-score
-                        if (scoreInput.value > 10 - scoreValue) {
-                            scoreInput.value = 10 - scoreValue;
-                        }
+              
 
                     } else { // else its a strike
                         document.querySelector('.active').classList.toggle('active');
