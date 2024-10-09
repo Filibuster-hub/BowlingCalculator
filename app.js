@@ -1,7 +1,5 @@
 
-// const { LinkedList, LinkedListNode } = require('@datastructures-js/linked-list');
 
-// const scoreList = new LinkedList();
 document.addEventListener('DOMContentLoaded', () => {
 
     const frameList = [new Frame()];
@@ -19,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let scoreInput = document.getElementById('input-score');
 
         let alert = document.getElementById('input-alert');
+
+        // check for invalid input
+        // if input invalid: show input validation alert
+        // else: 
+        //  remove alert (for case when alert was already showing)
+        //  continue with clickEvent
         if (Number(scoreInput.value) > Number(scoreInput.max) || isNaN(scoreInput.value) || Number(scoreInput.value) < 0 || !Number.isInteger(Number(scoreInput.value))) {
             alert.classList.add('show');
 
@@ -27,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const frameNumber = frameList.length;
 
-            //console.log(e.target);
+            //if randomButton clicked: get random score
+            //else: get score value from input
             if (e.target.id == "randomButton") {
                 let max = document.getElementById("input-score").getAttribute("max");
                 var scoreValue = Math.floor(Math.random() * (Number(max) + 1));
@@ -41,13 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // if not on last frame
             if (frameNumber < 10) {
-                // if first roll
+                // if on first roll of frame frameNumber
                 if (currentFrame.score.length == 0) {
 
+                    //if not rolling strike:
                     if (scoreValue < 10) { // if not rolling strike
                         // 1. set contents of frame on html doc to scoreValue
                         // 2. add the score to the current frame object
                         // 3. change maximum allowed score input
+
+                        //if scoring a 0: set image as gutter-image
+                        //else: set image as attack-image
                         if (scoreValue == 0) {
                             document.querySelector('.active').classList.toggle('active');
                             document.querySelector('#gutter-image').classList.toggle('active');
@@ -57,7 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             document.querySelector('#attack-image').classList.toggle('active');
                         }
 
+                        //display current frame's first roll (class: pre-spare) to scoreValue
                         documentFrameContainer.querySelector('.pre-spare').textContent = scoreValue;
+
                         scoreInput.setAttribute('max', 10 - scoreValue); //set maxinput value to 10-score
                         if (scoreInput.value > 10 - scoreValue) {
                             scoreInput.value = 10 - scoreValue;
